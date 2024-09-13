@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Main_View"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Back text view on the top left of the page -->
+
+    <!-- put Title on top of the page -->
+
+    <!--    put edit text user name-->
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/comici"
+        android:text="Back"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/comici"
+        android:text="Add User"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/usernameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Username"
+        android:fontFamily="@font/comici"
+        android:inputType="text"
+        android:padding="12dp" ></EditText>
+<!--    put edit text password-->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Password"
+        android:fontFamily="@font/comici"
+        android:inputType="textPassword"
+        android:padding="12dp" />
+<!--    put edit text full name-->
+
+    <EditText
+        android:id="@+id/fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Full Name"
+        android:fontFamily="@font/comici"
+        android:inputType="text"
+        android:padding="12dp" />
+<!--    put edit text email-->
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Email"
+        android:fontFamily="@font/comici"
+        android:inputType="textEmailAddress"
+        android:padding="12dp" />
+<!--    put button add user-->
+    <Button
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Add User"
+        android:fontFamily="@font/comici"
+        android:textSize="16sp" />
+
+
+
+
+</LinearLayout>

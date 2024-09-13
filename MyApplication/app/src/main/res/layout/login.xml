@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Main_View"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Login Title -->
+    <TextView
+        android:id="@+id/txtVw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="Login"
+        android:fontFamily="@font/comici"
+        android:textSize="36dp"
+        android:textColor="@android:color/black" />
+
+    <!-- Username Field -->
+    <EditText
+        android:id="@+id/txtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Username"
+        android:fontFamily="@font/comici"
+        android:inputType="text"
+        android:padding="12dp" ></EditText>
+
+    <!-- Password Field -->
+    <!-- match_parent: size as parent -->
+    <!-- wrap_content: size enough content -->
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Password"
+        android:fontFamily="@font/comici"
+        android:inputType="textPassword"
+        android:padding="12dp" />
+
+    <!-- Forgot Password -->
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Forgot password?"
+        android:fontFamily="@font/comici"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="14sp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_button_text"
+        android:backgroundTint="@color/sad"
+        android:fontFamily="@font/comici"
+        android:padding="12dp" />
+
+    <!-- Social Media Sign-In -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+<!--        <ImageButton-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:background="@android:color/transparent" />-->
+
+<!--        <ImageButton-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:background="@android:color/transparent" />-->
+
+<!--        <ImageButton-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:background="@android:color/transparent" />-->
+    </LinearLayout>
+
+    <!-- Sign-Up Option -->
+<!--    <TextView-->
+<!--        android:id="@+id/signUp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:text="SIGN UP"-->
+<!--        android:textColor="@android:color/holo_blue_dark"-->
+<!--        android:textSize="14sp" />-->
+
+</LinearLayout>

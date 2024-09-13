@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+
+        <!-- Main Activity -->
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+<!--            android:exported="true"-->
+<!--            android:theme="@style/Theme.MyApplication">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".activity.LoginAct"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Add homeact Activity -->
+        <activity
+            android:name=".activity.UserHomeAct"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
+        <!-- Add logout Activity -->
+        <activity
+            android:name=".activity.LogoutAct"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
+
+        <!-- Add search Activity -->
+        <activity
+            android:name=".activity.SearchAct"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
+
+        <!-- Add edit Activity -->
+        <activity
+            android:name=".activity.EditAct"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
+
+        <!-- Add add Activity -->
+        <activity
+            android:name=".activity.AddViewAct"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
+
+    </application>
+
+</manifest>

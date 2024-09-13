@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title -->
+
+
+    <!-- Wrapper for Title and Back Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <!-- Back TextView -->
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comici"
+            android:textColor="@android:color/holo_blue_dark"
+            android:text="Back"
+            android:clickable="true"
+            android:focusable="true"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="95dp"
+            android:layout_gravity="end"
+            android:fontFamily="@font/comici"
+            android:gravity="end"
+            android:text="Search User"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Search"
+        android:fontFamily="@font/comici"
+        android:inputType="text"
+        android:padding="12dp" />
+
+        <!-- Search Button -->
+
+    <!-- ListView for user list -->
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/comici"
+        android:padding="12dp"
+        android:text="Search"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+<!--    Add a button to the right of search user text to comeback to the page user-->
+
+
+    <!-- We create a scroll view -->
+    <TextView
+        android:id="@+id/userListTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="User List"
+        android:layout_gravity="center"
+        android:fontFamily="@font/comici"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <!-- We create a linear layout to hold the list of users -->
+        <LinearLayout
+            android:id="@+id/userList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp" >
+        </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

@@ -26,145 +26,139 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+    <!-- TextView for Password -->
+
+    <!-- EditText for Password -->
+
+    <!-- TextView for Fullname -->
+
+    <!-- EditText for Fullname -->
+
+    <!-- TextView for Email -->
+
+    <!-- EditText for Email -->
+
+
+    <!--    Add spinner for gender-->
+    <!--Add dob-->
+
+    <!-- Save Button -->
+
+    <!-- Reset Button -->
+
+    <!-- back Button -->
+
+    <EditText
+        android:id="@+id/edit_username"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/comici"
-        android:text="Username"
-        android:textSize="16sp"
+        android:inputType="text"
+        android:padding="12dp"
+        android:hint="username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title" />
 
     <EditText
-        android:id="@+id/edit_username"
+        android:id="@+id/edit_password"
         android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/comici"
         android:inputType="text"
         android:padding="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView1" />
-
-    <!-- TextView for Password -->
-
-    <!-- EditText for Password -->
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/comici"
-        android:text="Password"
-        android:textSize="16sp"
+        android:hint="password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_username" />
 
     <EditText
-        android:id="@+id/edit_password"
+        android:id="@+id/edit_fullname"
         android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/comici"
         android:inputType="text"
         android:padding="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView2" />
-
-    <!-- TextView for Fullname -->
-
-    <!-- EditText for Fullname -->
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/comici"
-        android:text="Fullname"
-        android:textSize="16sp"
+        android:hint="fullname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_password" />
 
     <EditText
-        android:id="@+id/edit_fullname"
+        android:id="@+id/edit_email"
         android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/comici"
         android:inputType="text"
         android:padding="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView4" />
-
-    <!-- TextView for Email -->
-
-    <!-- EditText for Email -->
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/comici"
-        android:text="Email"
-        android:textSize="16sp"
+        android:hint="email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_fullname" />
 
-    <EditText
-        android:id="@+id/edit_email"
+    <Spinner
+        android:id="@+id/spinner"
         android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/comici"
-        android:inputType="text"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView3" />
+        app:layout_constraintTop_toBottomOf="@id/edit_email" />
 
-    <!-- Save Button -->
+    <EditText
+        android:id="@+id/editText_datepicker"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/comici"
+        android:hint="Date of birth"
+        android:inputType="none"
+        android:focusable="false"
+        android:clickable="true"
+        android:padding="12dp"
+        android:drawableEnd="@drawable/calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner" />
+
     <Button
         android:id="@+id/btn_Save"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="@color/sad"
         android:text="Save"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toStartOf="@id/btn_Reset"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_email"
-        app:layout_constraintWidth_percent="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_datepicker"
+        app:layout_constraintWidth_percent="0.5"/>
 
-    <!-- Reset Button -->
     <Button
         android:id="@+id/btn_Reset"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/black"
         android:text="Reset"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_Save"
-        app:layout_constraintTop_toBottomOf="@id/edit_email"
+        app:layout_constraintTop_toBottomOf="@+id/editText_datepicker"
         app:layout_constraintWidth_percent="0.5" />
 
-    <!-- back Button -->
     <Button
         android:id="@+id/btn_back"
         android:layout_width="wrap_content"

@@ -69,6 +69,11 @@
             android:theme="@style/Theme.MyApplication">
         </activity>
 
+        <activity android:name=".activity.MenuItemtestScene"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+
     </application>
 
 </manifest>

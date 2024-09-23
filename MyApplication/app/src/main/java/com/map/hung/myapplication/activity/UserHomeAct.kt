@@ -13,8 +13,8 @@ class UserHomeAct : Activity() {
     private lateinit var txtHello: TextView
     private lateinit var btnLogout: Button
     private lateinit var btnAddUser: Button
-    private lateinit var btnEditUser: Button
-    private lateinit var btnDeleteUser: Button
+    private lateinit var btnListUser: Button
+//    private lateinit var btnDeleteUser: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,18 +41,18 @@ class UserHomeAct : Activity() {
             startActivity(intent)
         }
         // Edit user button
-        btnEditUser = findViewById(R.id.btnEditUser)
-        btnEditUser.setOnClickListener {
+        btnListUser = findViewById(R.id.btnListUser)
+        btnListUser.setOnClickListener {
             val intent = Intent(this, SearchAct::class.java)
             startActivity(intent)
         }
 
 //         Delete user button
-        btnDeleteUser = findViewById(R.id.btnDeleteUser)
-        btnDeleteUser.setOnClickListener {
-            val intent = Intent(this, SearchAct::class.java)
-            startActivity(intent)
-        }
+//        btnDeleteUser = findViewById(R.id.btnDeleteUser)
+//        btnDeleteUser.setOnClickListener {
+//            val intent = Intent(this, SearchAct::class.java)
+//            startActivity(intent)
+//        }
 
 
 

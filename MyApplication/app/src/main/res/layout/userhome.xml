@@ -73,30 +73,30 @@ editor and should not be used in the final layout. -->
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnEditUser"
+        android:id="@+id/btnListUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corners"
         android:backgroundTint="@color/sad"
         android:layout_marginTop="328dp"
-        android:text="Edit User"
+        android:text="Search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnDeleteUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corners"
-        android:backgroundTint="@color/sad"
-        android:layout_marginTop="392dp"
-        android:text="Delete"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <Button-->
+<!--        android:id="@+id/btnDeleteUser"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/rounded_corners"-->
+<!--        android:backgroundTint="@color/sad"-->
+<!--        android:layout_marginTop="392dp"-->
+<!--        android:text="Delete"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -77,7 +77,25 @@
         android:fontFamily="@font/comici"
         android:inputType="textEmailAddress"
         android:padding="12dp" />
-<!--    put button add user-->
+    <Spinner
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editText_datepicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Date"
+        android:focusable="false"
+        android:clickable="true"
+        android:inputType="none"
+        android:drawableEnd="@drawable/calendar"/>
+
+
+    <!--    put button add user-->
     <Button
         android:id="@+id/add"
         android:layout_width="match_parent"

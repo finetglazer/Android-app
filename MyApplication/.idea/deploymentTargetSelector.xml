@@ -27,17 +27,6 @@
         </DropdownSelection>
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="AddViewAct">
-        <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-08-31T02:43:53.852120700Z">
-          <Target type="DEFAULT_BOOT">
-            <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\DELL\.android\avd\Small_Phone_API_35.avd" />
-            </handle>
-          </Target>
-        </DropdownSelection>
-        <DialogSelection />
-      </SelectionState>
       <SelectionState runConfigName="SearchAct">
         <option name="selectionMode" value="DROPDOWN" />
         <DropdownSelection timestamp="2024-08-29T01:27:21.882858800Z">
@@ -50,6 +39,9 @@
         <DialogSelection />
       </SelectionState>
       <SelectionState runConfigName="EditAct">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="MenuItemtestScene">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

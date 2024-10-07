@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/user_background"
+    android:elevation="4dp"
+    android:layout_marginBottom="10dp"
+    android:padding="10dp">
+
+    <!-- Thêm TextView để hiển thị ID -->
+<!--    <TextView-->
+<!--        android:id="@+id/idTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="ID:"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="16sp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true" />-->
+
+    <!-- Tên người dùng -->
+    <TextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UserName:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/comici"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- Mật khẩu người dùng -->
+<!--    <TextView-->
+<!--        android:id="@+id/passwordTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="PassWord:"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="16sp"-->
+<!--        android:fontFamily="@font/comici"-->
+<!--        android:layout_below="@id/userNameTextView"-->
+<!--        android:layout_alignParentStart="true" />-->
+
+    <!-- Email người dùng -->
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/comici"
+        android:layout_below="@id/userNameTextView"
+        android:layout_alignParentStart="true" />
+
+    <!-- Họ tên đầy đủ -->
+    <TextView
+        android:id="@+id/fullNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/comici"
+        android:layout_below="@id/emailTextView"
+        android:layout_alignParentStart="true" />
+
+    <!-- Số điện thoại -->
+    <TextView
+        android:id="@+id/telTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tel:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/comici"
+        android:layout_below="@id/fullNameTextView"
+        android:layout_alignParentStart="true" />
+
+    <!-- Ngày sinh -->
+    <TextView
+        android:id="@+id/dobTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date of Birth:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/comici"
+        android:layout_below="@id/telTextView"
+        android:layout_alignParentStart="true" />
+
+    <!-- Giới tính -->
+    <TextView
+        android:id="@+id/genderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/comici"
+        android:layout_below="@id/dobTextView"
+        android:layout_alignParentStart="true" />
+
+    <!-- Menu ba chấm để chỉnh sửa/xóa -->
+    <ImageView
+        android:id="@+id/menuOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/userNameTextView"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/comici"
+        android:contentDescription="Menu options"
+        android:src="@drawable/ic_more_vert"
+        android:layout_marginEnd="8dp" />
+</RelativeLayout>

@@ -11,7 +11,8 @@ class User(
     var fullname: String? = null,
     var email: String? = null,
     var dob: Date? = null,
-    var gender: String? = null
+    var gender: String? = null,
+    var phone: String? = null
     ) : Parcelable {
 
     private constructor(parcel: Parcel) : this(
@@ -20,7 +21,8 @@ class User(
         fullname = parcel.readString(),
         email = parcel.readString(),
         dob = Date(parcel.readLong()),   // Reading Date as Long (milliseconds)
-        gender = parcel.readString()
+        gender = parcel.readString(),
+        phone = parcel.readString()
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -30,6 +32,7 @@ class User(
         parcel.writeString(email)
         parcel.writeLong(dob?.time ?: -1L)  // Write Date as Long (milliseconds)
         parcel.writeString(gender)
+        parcel.writeString(phone)
     }
 
     override fun describeContents(): Int {

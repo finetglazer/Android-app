@@ -16,6 +16,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.map.hung.myapplication.R
+import com.map.hung.myapplication.dao.UserDao
 import com.map.hung.myapplication.model.User
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -27,6 +28,7 @@ class AddViewAct : Activity() {
     private var  txtPassword: EditText? = null
     private var txtFullname: EditText? = null
     private var txtEmail: EditText? = null
+    private var txtPhone: EditText? =null
     private var btnAdd: Button? = null
     private var btnBack: TextView? = null
     private var spinner: Spinner? = null
@@ -42,6 +44,7 @@ class AddViewAct : Activity() {
         txtPassword = findViewById(R.id.password)
         txtFullname = findViewById(R.id.fullname)
         txtEmail = findViewById(R.id.email)
+        txtPhone = findViewById(R.id.phone)
         btnAdd = findViewById(R.id.add)
         btnBack = findViewById(R.id.back)
         spinner = findViewById(R.id.gender)
@@ -53,7 +56,6 @@ class AddViewAct : Activity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         //set adapter to spinner
-
         spinner!!.adapter = adapter
 
         var check = 0
@@ -101,8 +103,10 @@ class AddViewAct : Activity() {
         }
 
         btnAdd!!.setOnClickListener {
+
+            val userDao = UserDao(this)
             // check any empty field
-            if (txtUsername!!.text.isEmpty() || txtPassword!!.text.isEmpty() || txtFullname!!.text.isEmpty() || txtEmail!!.text.isEmpty()) {
+            if (txtUsername!!.text.isEmpty() || txtPassword!!.text.isEmpty() || txtFullname!!.text.isEmpty() || txtEmail!!.text.isEmpty() || editTextDatePicker!!.text.isEmpty() || txtPhone!!.text.isEmpty())  {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -113,47 +117,41 @@ class AddViewAct : Activity() {
             val fullname = txtFullname!!.text.toString()
             val email = txtEmail!!.text.toString()
             val gender = spinner!!.selectedItem.toString()
+            val phone = txtPhone!!.text.toString()
 
 
             val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
             val dobString = editTextDatePicker!!.text.toString()
             val dob = dateFormat.parse(dobString)
 
-            val user = User(username, password, fullname, email, dob, gender)
-            // add gender and date of birth
 
+            val user = User(username, password, fullname, email, dob, gender, phone)
 
-            // Retrieve the list of saved users
-            val userPreferences = UserPreferences(this)
-            val savedUsers = userPreferences.getUsers() ?: arrayOf()
             //if it exist, show toast message
-            // Check if the username or email already exists
-            var userExists = false
-            for (savedUser in savedUsers) {
-                if (savedUser.username == username) {
-                    userExists = true
+            if (userDao.userExists(username, email)) {
+                if (userDao.userUserNameExists(username)) {
                     txtUsername!!.error = "Username already exists"
-                    break
                 }
-                if (savedUser.email == email) {
-                    userExists = true
+                if (userDao.userEmailExists(email)) {
                     txtEmail!!.error = "Email already exists"
-                    break
                 }
+                return@setOnClickListener
             }
 
-            // If no match is found, save the new user
-            if (!userExists) {
-                val newUsersList: Array<User> = savedUsers.plus(user) // Add the new user to the list
-                userPreferences.addUser(newUsersList)  // Save the updated list
-                //show toasted message
+            val userId = userDao.addUser(user)
+            if (userId > 0) {
+                // User added successfully
                 Toast.makeText(this, "User added successfully", Toast.LENGTH_SHORT).show()
                 txtUsername!!.setText("")
                 txtPassword!!.setText("")
                 txtFullname!!.setText("")
                 txtEmail!!.setText("")
                 editTextDatePicker!!.setText("")
+                txtPhone!!.setText("")
                 spinner!!.setSelection(0)
+            } else {
+                // Failed to add user
+                Toast.makeText(this, "Failed to add user", Toast.LENGTH_SHORT).show()
             }
         }
 

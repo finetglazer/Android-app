@@ -42,6 +42,7 @@ android {
 
 dependencies {
 
+    implementation("mysql:mysql-connector-java:8.0.33")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

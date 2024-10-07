@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,15 +15,15 @@
         tools:targetApi="31">
 
         <!-- Main Activity -->
-<!--        <activity-->
-<!--            android:name=".MainActivity"-->
-<!--            android:exported="true"-->
-<!--            android:theme="@style/Theme.MyApplication">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <!-- Login Activity -->
         <activity
@@ -69,11 +70,22 @@
             android:theme="@style/Theme.MyApplication">
         </activity>
 
-        <activity android:name=".activity.MenuItemtestScene"
+        <!-- Add main Activity -->
+        <activity
+            android:name=".dao.MyActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.MyApplication">
+        </activity>
 
+        <activity
+            android:name=".activity.AddViewTest"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
 
     </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
 </manifest>

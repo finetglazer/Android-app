@@ -1,6 +1,7 @@
 package com.map.hung.myapplication.dao
 
-import DbHelper
+//import DbHelper
+import android.app.Activity
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
@@ -8,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.map.hung.myapplication.R
 
 fun connectDatabase(context: Context): SQLiteDatabase {
-    val dbPath = context.getExternalFilesDir(null)?.absolutePath + "/example.db"
+    val dbPath = context.getExternalFilesDir(null)?.absolutePath + "/keke.db"
     return SQLiteDatabase.openDatabase(
         dbPath,
         null,
@@ -19,11 +20,11 @@ fun connectDatabase(context: Context): SQLiteDatabase {
 fun delete(db: SQLiteDatabase, tableName: String) {
     db.execSQL("DROP TABLE IF EXISTS $tableName")
 }
-class MyActivity : AppCompatActivity() {
+class MyActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.MainActivity)
+        setContentView(R.layout.mainactivity)
 
         val dbHelper = DbHelper(this)
         val db = dbHelper.writableDatabase  // This will create or open the database

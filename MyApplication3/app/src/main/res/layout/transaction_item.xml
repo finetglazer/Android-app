@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/user_background"
+    android:elevation="4dp"
+    android:layout_marginBottom="10dp"
+    android:padding="10dp">
+
+    <!-- Thêm TextView để hiển thị ID -->
+<!--    <TextView-->
+<!--        android:id="@+id/idTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="ID:"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="16sp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true" />-->
+
+    <!-- Id transaction -->
+    <TextView
+        android:id="@+id/IdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Id:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/comici"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- Mật khẩu người dùng -->
+<!--    <TextView-->
+<!--        android:id="@+id/passwordTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="PassWord:"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="16sp"-->
+<!--        android:fontFamily="@font/comici"-->
+<!--        android:layout_below="@id/userNameTextView"-->
+<!--        android:layout_alignParentStart="true" />-->
+
+    <!-- name transaction -->
+    <TextView
+        android:id="@+id/NameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/comici"
+        android:layout_below="@id/IdTextView"
+        android:layout_alignParentStart="true" />
+
+    <!-- id cate in out -->
+    <TextView
+        android:id="@+id/CateInOutTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thu/Chi"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/comici"
+        android:layout_below="@id/NameTextView"
+        android:layout_alignParentStart="true" />
+
+    <!-- amount -->
+    <TextView
+        android:id="@+id/amountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lượng tiền:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/comici"
+        android:layout_below="@id/CateInOutTextView"
+        android:layout_alignParentStart="true" />
+
+    <!-- date -->
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/comici"
+        android:layout_below="@id/amountTextView"
+        android:layout_alignParentStart="true" />
+
+    <!-- note -->
+    <TextView
+        android:id="@+id/noteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/comici"
+        android:layout_below="@id/dateTextView"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

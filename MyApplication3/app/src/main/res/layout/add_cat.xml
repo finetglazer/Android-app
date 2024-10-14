@@ -1,0 +1,165 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="@font/comici"
+        android:gravity="center"
+        android:text="Thêm category"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView for Thu/Chi -->
+
+    <TextView
+        android:id="@+id/label_thu_chi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Thu/Chi"
+        app:layout_constraintEnd_toStartOf="@id/thu_chi_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <Spinner
+        android:id="@+id/thu_chi_spinner"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/comici"
+        android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/label_thu_chi"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <!-- TextView for Name -->
+
+    <TextView
+        android:id="@+id/label_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Tên"
+        app:layout_constraintEnd_toStartOf="@id/name_editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thu_chi_spinner"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <EditText
+        android:id="@+id/name_editText"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/comici"
+        android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/label_name"
+        app:layout_constraintTop_toBottomOf="@id/thu_chi_spinner" />
+
+    <!-- TextView for Icon -->
+
+    <TextView
+        android:id="@+id/label_icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Icon"
+        app:layout_constraintEnd_toStartOf="@id/icon_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_editText"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <Spinner
+        android:id="@+id/icon_spinner"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/comici"
+        android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/label_icon"
+        app:layout_constraintTop_toBottomOf="@id/name_editText" />
+
+    <!-- TextView for Parent -->
+
+    <TextView
+        android:id="@+id/label_parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Danh mục cha"
+        app:layout_constraintEnd_toStartOf="@id/parent_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_spinner"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <Spinner
+        android:id="@+id/parent_spinner"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="14dp"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/label_parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_spinner" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/btn_Save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="Save"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@id/btn_Reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parent_spinner"
+        app:layout_constraintWidth_percent="0.5"/>
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/btn_Reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:text="Reset"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_Save"
+        app:layout_constraintTop_toBottomOf="@+id/parent_spinner"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:text="Back"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_Save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

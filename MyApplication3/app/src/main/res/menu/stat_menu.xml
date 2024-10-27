@@ -1,0 +1,9 @@
+<!-- res/menu/menu_main.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/stat_cat"
+        android:title="Thống kê theo loại giao dịch" />
+    <item
+        android:id="@+id/stat_time"
+        android:title="Thống kê theo thời gian" />
+</menu>

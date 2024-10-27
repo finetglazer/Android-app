@@ -59,24 +59,44 @@
         </activity>
 
         <activity
-            android:name=".activity.AddCatAct"
+            android:name=".activity.ViewCalendarActivity"
             android:exported="true"
-            android:theme="@style/Theme.MyApplication">
-        </activity>
-
-        <activity android:name=".test2.MainActivity"
-
-            android:exported="true"
-            android:theme="@style/Theme.MyApplication">
-
-            <intent-filter
-                android:label="@string/app_name">
+            android:theme="@style/Theme.AppCompat.Light"> <!-- Make sure this is AppCompat-based -->
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".activity.AddCatAct"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
 
+        <activity
+            android:name=".activity.DayTransactionsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
+
+        <activity
+            android:name=".activity.StatCatAct"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
+
+        <activity
+            android:name=".activity.StatTimeAct"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
+
+        <activity
+            android:name=".activity.CatDetailAct"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
 
     </application>
 

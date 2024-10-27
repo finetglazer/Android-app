@@ -3,7 +3,6 @@ package com.map.hung.myapplication.activity
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -11,38 +10,46 @@ import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.ScrollView
 import android.widget.TextView
-import androidx.compose.runtime.currentCompositionErrors
 import com.map.hung.myapplication.R
 import com.map.hung.myapplication.dao.CatInOutDao
 import com.map.hung.myapplication.dao.TransactionDao
 import com.map.hung.myapplication.model.Transaction
 import java.text.SimpleDateFormat
 import java.util.Calendar
+import java.util.Date
 import java.util.Locale
 
-class HomeAct : Activity(){
-
+class DayTransactionsActivity : Activity() {
     private lateinit var scrollView: ScrollView
-    private lateinit var txt_back: TextView
+    private lateinit var txtTitle: TextView
     private lateinit var addButton: Button
     private lateinit var transactionList: LinearLayout
     private lateinit var incomeTextView: TextView
     private lateinit var expenseTextView: TextView
     private lateinit var txtDetail: TextView
-    private lateinit var menuImage: ImageView
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.search) // Assuming the XML layout file is named home.xml
         val transactionDao = TransactionDao(this)
 
+        //get the selected date from the calendar
+        val date = intent.getStringExtra("selected_date")
+
+        txtTitle = findViewById(R.id.date)
         scrollView = findViewById(R.id.scrollView)
         transactionList = findViewById(R.id.transaction_list)
         addButton = findViewById(R.id.add_button)
         incomeTextView = findViewById(R.id.income_amount)
         expenseTextView = findViewById(R.id.expense_amount)
         txtDetail = findViewById(R.id.id_detail)
-        menuImage = findViewById(R.id.menu)
+
+
+        val parsedDate = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).parse(date) ?: throw IllegalArgumentException("Invalid date format")
+
+        txtTitle.text = "Ngày ${SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(parsedDate)}"
 
         txtDetail.setOnClickListener {
             val intent = Intent(this, ViewCalendarActivity::class.java)
@@ -55,9 +62,7 @@ class HomeAct : Activity(){
             startActivity(intent)
         }
 
-        // Showing the data of the current day
-        val currentDate = Calendar.getInstance().time
-        val transactions = transactionDao.search(currentDate) // Pass current date to search()
+        val transactions = transactionDao.search(parsedDate) // Pass current date to search()
 
         // Display transactions in transactionList
         displayTransactions(transactionList ,transactions)
@@ -76,9 +81,6 @@ class HomeAct : Activity(){
         incomeTextView.text = "Thu: $income"
         expenseTextView.text = "Chi: $expense"
 
-        menuImage.setOnClickListener{
-            display(menuImage)
-        }
 
 
     }
@@ -113,29 +115,5 @@ class HomeAct : Activity(){
         }
     }
 
-    private fun display(view: View) {
-        val popupMenu = PopupMenu(this, view)
-
-        popupMenu.menuInflater.inflate(R.menu.stat_menu, popupMenu.menu)
-
-        popupMenu.setOnMenuItemClickListener { item ->
-            when (item.itemId) {
-                R.id.stat_cat -> {
-                    val intent = Intent(this, StatCatAct::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.stat_time -> {
-                    val intent = Intent(this, StatTimeAct::class.java)
-                    startActivity(intent)
-                    true
-                }
-                else -> false
-            }
-        }
-
-        popupMenu.show()
-
-    }
 
 }

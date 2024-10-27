@@ -51,6 +51,11 @@ android {
 }
 
 dependencies {
+    implementation("com.github.PhilJay:MPAndroidChart:3.1.0")
+
+    implementation ("androidx.gridlayout:gridlayout:1.0.0")
+    implementation ("com.google.android.material:material:1.8.0")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -60,7 +65,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
     implementation(libs.androidx.recyclerview) // Add ConstraintLayout
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
